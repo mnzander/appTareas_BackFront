@@ -1,0 +1,273 @@
+html {
+    margin: 0;
+    padding: 0;
+    margin-top: 15vh;
+    display: flex;
+    background-image: url(/front/src/images/bgnotebook.jpg);
+    background-position:center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15vh;
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    overflow: hidden;
+    opacity: 83%;
+
+    &:hover {
+        opacity: 95%;
+    }
+
+    p{
+        font-size: 27vh;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+    }
+    
+    button{
+        font-size: 3.75vh;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border: none;
+        background-color: transparent;
+        letter-spacing: 0.5vh;
+        color: white;
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            text-underline-offset: 0.5vh;
+        }
+    }
+}
+
+.app {
+
+.task-list {
+    position: relative;
+    font-family: "Playwrite CU", cursive;
+    font-size: 2.8vh;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    padding-left: 29vh;
+    padding-top: 4.9vh;
+    letter-spacing: 0.1vh;
+
+        .edit-button {
+            position: absolute;
+            left: 65vh;
+            height: 5.7vh;
+            width: 10vh;
+            background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+            color: white;
+            font-weight: normal;
+            opacity: 90%;
+            font-size: 2.2vh;
+            border-radius: 1vh;
+        }
+
+        button{
+            background-color: transparent;
+            border: none;
+            font-family: "Playwrite CU", cursive;
+            font-size: 2.8vh;
+            font-weight: bold;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .detail-modal, .create-modal, .update-modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0vh 3vh;
+        font-family: "Playwrite CU", cursive;
+        font-size: 1.9vh;
+        background-color: rgb(235, 231, 0);
+        width: 40vh;
+        height: 40vh;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.685);
+
+        h2{
+            text-decoration: underline;
+            text-underline-offset: 0.5vh;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        input, textarea{
+            font-family: "Playwrite CU", cursive;
+            background-image: url(/front/src/images/bgnotebook.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15vh;
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    overflow: hidden;
+    opacity: 88%;
+
+    &:hover {
+        opacity: 95%;
+    }
+
+    p{
+        font-size: 27vh;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        transform: rotate(180deg);
+    }
+
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+        margin-top: -2vh;
+
+        h3{
+            display: flex;
+            align-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 2.5vh;
+            letter-spacing: 0.3vh;
+            color:  white;
+        }
+
+        .form{
+            display: inline-block;
+            position: relative;
+            margin-top: -1.5vh;
+
+            .email {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: transparent;
+                border: transparent;
+                letter-spacing: 0.2vh;
+                font-size: 2vh;
+                font-weight: bold;
+                color:  black;
+                padding: 1vh 0;
+                width: 35vh;
+                border-bottom: 0.3vh solid white;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder{
+                    color: white
+                }
+            }
+
+            .boton {
+                background-color: transparent;
+                border: transparent;
+                background-color: black;
+                display: flex;
+                height: 2.5vh;
+                width: 3vh;
+                justify-content: flex-end;
+                margin-top: -3.5vh;
+                right:0;
+                position: absolute;
+
+                svg{
+                    height: 2vh;
+                    width: 2vh;
+                }
+
+                svg:hover{
+                    cursor: pointer;
+                    fill:black;
+                }
+            }
+        }
+    }
+    .social .socialmedia .lista {
+        display: flex;
+        flex-direction: row;
+        gap: 4vh;
+
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4.5vh;
+            height: 4.5vh;
+            border-radius: 50%;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+
+        .tw{
+            background: rgb(0, 183, 255);
+        }
+
+        .fb{
+            background: rgb(0, 85, 165);
+        }
+
+        .ig{
+            background: conic-gradient(
+                from 240deg,
+                #f09433,
+                #e6683c,
+                #dc2743,
+                #cc2366,
+                #bc1888,
+                #e1306c,
+                #fd1d1d,
+                #f56040,
+                #f77737,
+                #fcaf45 370deg,
+                #ffdc80 370deg,
+                #f09433 370deg
+            );
+        }
+
+        .yt{
+            background: rgb(255, 0, 0);
+        }
+
+        .item a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+        } 
+    }  
+}
